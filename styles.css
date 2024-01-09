@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body{
+    width:100%;
+    height:100vh;
+    background-color: rgb(0, 0, 0);
+}
+
+.bubble{
+    width: 1px;
+    height: 1px;
+    background-color: rgb(255, 0, 0);
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 0 250px 100px red;
+    animation: move 20s linear infinite;
+}
+
+@keyframes move {
+    0%{
+        left: 100%;
+        top: 0;
+    }
+    20%{
+        left: 0;
+        top: 16.67vh;
+    }
+    40%{
+        left: 100%;
+        top: 35vh;
+    }
+    60%{
+        left: 0;
+        top: 50vh;
+    }
+    80%{
+        left: 100%;
+        top: 70vh;
+    }
+    100%{
+        left: 0;
+        top: 100vh;
+    }
+}
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    position: relative;
+    width: 20rem;
+    text-align: justify;
+    cursor: default;
+    margin: 12px 5px;
+    overflow: hidden;
+    pointer-events: visible;
+    user-select: none;
+    transition: .3s;
+}
+
+.blog-text{
+    color: red;
+    text-align: left;
+    font-size: 12px;
+}
+
+.card-link{
+    cursor: pointer;
+}
+
+.list-group-item{
+    transition: .3s;
+}
+
+.list-group-item:hover{
+    background: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.card-body a{
+    text-decoration: none;
+}
+
+.card-body a:active{
+    color: red;
+}
+
+
+@media screen and (max-width:600px) {
+    .card{
+        display: block;
+        margin: 15px auto;
+    }
+}
