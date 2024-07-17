@@ -97,6 +97,10 @@ body{
     color: red;
 }
 
+.card-img, .card-img-top{
+    aspect-ratio: 2;
+}
+
 
 @media screen and (max-width:600px) {
     .card{
